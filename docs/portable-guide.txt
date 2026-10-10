@@ -1,0 +1,43 @@
+词绘 LyricCanvas 便携正式版 1.0.0
+
+运行
+1. 将压缩包完整解压到一个普通文件夹。
+   示例：C:\Users\Alice\Downloads\LyricCanvas\
+2. 双击这个文件夹里的 lyc.exe。请保留同目录的所有 DLL、runtimes 等文件。
+3. 此 Windows x64 便携包自带 .NET 运行时，不需要安装 .NET SDK。
+4. 关闭设置窗口默认继续在系统托盘运行。真正退出请从托盘菜单选择“退出”。
+
+歌词与同步
+播放器需要提供有效的 Windows SMTC 曲名、歌手、播放状态和时间轴。
+某些播放器需另外安装桥接插件；词绘不包含、不自动安装第三方播放器插件。
+如果播放器只提供曲名和播放状态，暂停/拖动/单曲循环无法保证精确同步。
+可以在“歌词来源”关闭联网，用本地 LRC 歌词；联网歌词会缓存到歌词目录的 cache 子目录。
+增强 LRC 提供逐词/音节时间；普通 LRC 仅有整句时间，从左至右高亮是整句内估算。
+音频实时校准是可选实验功能，默认关闭；首次启用需下载本机识别模型。
+
+设置
+字体、颜色、字号、动效等在歌词显示页即时预览，确认并保存后保留，取消修改则恢复原设置。
+布局方案可添加、切换、改名，每套方案保存歌词框的位置、尺寸、旋转角度。
+导入字体只保存到词绘的字体目录，不安装到 Windows。
+
+彻底删除
+1. 先从托盘退出词绘。
+2. 删除解压后的整个运行文件夹。
+   示例：C:\Users\Alice\Downloads\LyricCanvas\
+3. 删除词绘的个人设置与导入字体：
+   %APPDATA%\LyricCanvas
+   示例：C:\Users\Alice\AppData\Roaming\LyricCanvas\
+4. 删除备用配置与实验模型（若这些目录存在）：
+   %LOCALAPPDATA%\LyricCanvas
+   示例：C:\Users\Alice\AppData\Local\LyricCanvas\
+   %USERPROFILE%\LyricCanvas\models
+   示例：C:\Users\Alice\LyricCanvas\models\
+   %TEMP%\LyricCanvas\models
+   示例：C:\Users\Alice\AppData\Local\Temp\LyricCanvas\models\
+5. 如果曾选择自定义歌词目录，自动下载的歌词位于其中的 cache 子目录。
+   示例：D:\MyLyrics\cache\
+   只删除其中不再需要的自动缓存；自己导入的 LRC 和原字体文件可继续保留。
+6. 自己创建的快捷方式、下载的 ZIP 可按需删除。
+
+词绘没有安装服务，不会自动卸载或修改播放器的第三方桥接插件。
+如果使用旧版 LyricDesktop，其 AppData 目录是独立的旧数据，按需另行处理。

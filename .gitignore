@@ -1,0 +1,30 @@
+## .NET / Visual Studio
+bin/
+obj/
+*.user
+*.suo
+.vs/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
+待手动删除-*/
+TestResults/
+
+## VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+## 系统
+Thumbs.db
+desktop.ini
+*.log
+LyricDesktop.user.json
+LyricCanvas.user.json
+
+# 本机快捷方式与个人歌词/缓存
+*.lnk
+lyrics/*.lrc
+lyrics/cache/

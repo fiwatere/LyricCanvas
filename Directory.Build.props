@@ -1,0 +1,29 @@
+<Project>
+
+  <!--
+    仓库级公共编译设置。子项目会继承这里的属性，不用各自重复写。
+
+    目标框架写成 net8.0-windows10.0.19041.0 是必须的，原因：
+    读取系统正在播放的音乐要调用 SMTC（Windows 的 SystemMediaTransportControls），
+    它是 WinRT API。只有声明了具体的目标平台版本，.NET SDK 才会生成访问 WinRT
+    所需的互操作支持；只写 net8.0-windows 的话，System.Windows.Media.Control
+    这些命名空间根本不存在，编译直接报错。
+
+    19041 = Windows 10 2004 (20H1)。选它的理由：
+      - WindowsMediaController 2.5.6 提供了 net8.0-windows10.0.19041 这份程序集；
+      - 它比更老的 17763 版本多出一些 SMTC 能力；
+      - 比起 22000（Win11）保守，能在更多 Windows 10 机器上跑。
+
+    SupportedOSPlatformVersion 单独设成 17763：它管的是"运行时最低允许的系统版本"，
+    可以比目标框架版本低，这样生成的程序仍能在老系统上启动而不是直接拒绝运行。
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+</Project>
