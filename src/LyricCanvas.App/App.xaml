@@ -1,0 +1,30 @@
+<Application x:Class="LyricCanvas.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             ShutdownMode="OnExplicitShutdown">
+    <!--
+        注意两点：
+
+        1. ShutdownMode="OnExplicitShutdown"：程序有两个窗口，歌词窗口和设置窗口
+           各自都可以被关掉，关哪个都不该让程序退出。真正的退出入口是托盘菜单。
+
+        2. 这里刻意不写 StartupUri。启动逻辑写在 App.xaml.cs 的 OnStartup 里，
+           因为需要读命令行参数、并决定要不要自动打开设置窗口。
+    -->
+    <Application.Resources>
+        <!--
+            配色放在应用级资源里，而不是塞进某个窗口的资源字典。
+
+            原因（踩过的坑）：设置窗口的 Window 标签上就用了
+            Background="{StaticResource WindowBackgroundBrush}"，
+            如果把字典放在它后面的 Window.Resources 里合并，
+            解析到那一行时资源还没加载，启动直接抛 XamlParseException。
+            放在应用级资源里，任何窗口任何时候都取得到。
+        -->
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Settings/SettingsTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

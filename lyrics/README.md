@@ -1,0 +1,1 @@
+仅放入你有权使用的 LRC 歌词。个人歌词与 lyrics/cache/ 已加入 .gitignore，不会随源码提交。

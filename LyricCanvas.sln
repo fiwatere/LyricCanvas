@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LyricCanvas.App", "src\LyricCanvas.App\LyricCanvas.App.csproj", "{9E1C4B2A-6D3F-4A58-9C21-1B7E5D0A3F11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E01A64CD-DEEE-4B95-BD33-CDB6BE50CF7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricCanvas.Core", "src\LyricCanvas.Core\LyricCanvas.Core.csproj", "{A99716C4-2863-489B-86FE-F36DD3EED7CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricCanvas.Media", "src\LyricCanvas.Media\LyricCanvas.Media.csproj", "{4E27A1DF-CBB7-41E3-A008-95B35460DCF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{ABFBE03F-F5FA-4479-91B4-FE41603E30FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricCanvas.Core.Tests", "tests\LyricCanvas.Core.Tests\LyricCanvas.Core.Tests.csproj", "{A35FABF1-315A-4F23-8913-7B4AE71B22D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricCanvas.Media.Tests", "tests\LyricCanvas.Media.Tests\LyricCanvas.Media.Tests.csproj", "{03763381-9DCF-4D66-B81A-3D59A67F946D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricCanvas.App.Tests", "tests\LyricCanvas.App.Tests\LyricCanvas.App.Tests.csproj", "{8D757713-A8FC-4D22-BA9F-334019F57356}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E1C4B2A-6D3F-4A58-9C21-1B7E5D0A3F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E1C4B2A-6D3F-4A58-9C21-1B7E5D0A3F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E1C4B2A-6D3F-4A58-9C21-1B7E5D0A3F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E1C4B2A-6D3F-4A58-9C21-1B7E5D0A3F11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A99716C4-2863-489B-86FE-F36DD3EED7CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A99716C4-2863-489B-86FE-F36DD3EED7CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A99716C4-2863-489B-86FE-F36DD3EED7CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A99716C4-2863-489B-86FE-F36DD3EED7CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E27A1DF-CBB7-41E3-A008-95B35460DCF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E27A1DF-CBB7-41E3-A008-95B35460DCF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E27A1DF-CBB7-41E3-A008-95B35460DCF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E27A1DF-CBB7-41E3-A008-95B35460DCF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A35FABF1-315A-4F23-8913-7B4AE71B22D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A35FABF1-315A-4F23-8913-7B4AE71B22D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A35FABF1-315A-4F23-8913-7B4AE71B22D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A35FABF1-315A-4F23-8913-7B4AE71B22D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03763381-9DCF-4D66-B81A-3D59A67F946D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03763381-9DCF-4D66-B81A-3D59A67F946D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03763381-9DCF-4D66-B81A-3D59A67F946D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03763381-9DCF-4D66-B81A-3D59A67F946D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D757713-A8FC-4D22-BA9F-334019F57356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D757713-A8FC-4D22-BA9F-334019F57356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D757713-A8FC-4D22-BA9F-334019F57356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D757713-A8FC-4D22-BA9F-334019F57356}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A99716C4-2863-489B-86FE-F36DD3EED7CA} = {E01A64CD-DEEE-4B95-BD33-CDB6BE50CF7F}
+		{4E27A1DF-CBB7-41E3-A008-95B35460DCF1} = {E01A64CD-DEEE-4B95-BD33-CDB6BE50CF7F}
+		{A35FABF1-315A-4F23-8913-7B4AE71B22D8} = {ABFBE03F-F5FA-4479-91B4-FE41603E30FD}
+		{03763381-9DCF-4D66-B81A-3D59A67F946D} = {ABFBE03F-F5FA-4479-91B4-FE41603E30FD}
+		{8D757713-A8FC-4D22-BA9F-334019F57356} = {ABFBE03F-F5FA-4479-91B4-FE41603E30FD}
+	EndGlobalSection
+EndGlobal

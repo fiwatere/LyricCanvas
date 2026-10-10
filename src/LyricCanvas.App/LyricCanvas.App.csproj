@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- TargetFramework / Nullable / ImplicitUsings 由仓库根的 Directory.Build.props 统一提供 -->
+  <PropertyGroup>
+    <!-- 给 exe 一个真实图标：任务栏、托盘、资源管理器都用它。
+         之前托盘图标是纯代码画的，系统有时会当成无效图标而不显示。 -->
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
+    <!--
+      托盘图标用了 WinForms 的 NotifyIcon：WPF 自己没有托盘控件，
+      而 NotifyIcon 是 .NET 里现成且稳定的方案，比手搓 Shell_NotifyIcon 省事。
+      注意这个开关只能在 WPF 项目里和 UseWPF 同时打开（WPF 必须在前面）。
+    -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>LyricCanvas.App</RootNamespace>
+    <AssemblyName>lyc</AssemblyName>
+    <AssemblyTitle>词绘</AssemblyTitle>
+    <Product>LyricCanvas</Product>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!--
+      WFAC010：WinForms 分析器说"把 DPI 设置从 manifest 挪到 ApplicationHighDpiMode"。
+      这个建议对纯 WinForms 程序成立，但本项目主体是 WPF，用的是 app.manifest 里的
+      PerMonitorV2 声明（WPF 的官方做法）。托盘图标只是顺带用了一下 NotifyIcon，
+      不需要按 WinForms 的方式配置 DPI，所以关掉这条警告。
+    -->
+    <NoWarn>$(NoWarn);WFAC010</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LyricCanvas.Core\LyricCanvas.Core.csproj" />
+    <ProjectReference Include="..\LyricCanvas.Media\LyricCanvas.Media.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\app.ico" />
+  </ItemGroup>
+
+</Project>
